@@ -1,29 +1,154 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fruit List Tests</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js" charset="utf-8"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.min.js"></script>
+	<title>Fruits Array</title>
+	<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="simplegrid.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+    <script src="https://kit.fontawesome.com/455b1f2011.js" crossorigin="anonymous"></script>
+
+    <script type="text/x-template" class="templateName">
+        {{#each fruitName}}
+        <li class="displayName">
+            {{this}}
+        </li>
+        {{/each}}
+    </script>
+    <script type="text/x-template" class="templateIcon">
+        {{#each icons}}
+        <li class="displayIcon">
+            {{this}}
+        </li>
+        {{/each}}
+    </script>
+
 </head>
+
 <body>
 
-    <div id="mocha"></div>
-    <script>
-        mocha.setup('bdd');
-        var assert = chai.assert;
-    </script>
+    <div class="container">  
+        
+         <form method="" action="/search/" class="search-form"> 
+            <label>
+            <span class="sr-only">Search Fruits:</span>
+            
+            <input type="text" name="" id="search-item" placeholder="search fruits" onkeyup="search()"> 
+           <!-- <button  onclick="search();" class="search-form__button" aria-label="search">🔍</button> -->
+          
+            </label>
+        </form> 
+        <div class="product-list" id="product-list">
+            <div class="product">
+                <img src="images/grapes.jpg" alt="">
+                <h2>Grapes</h2>
+            </div>
+            <div class="product">
+                <img src="images/melon.jpg" alt="">
+                <h2>Melon</h2>
+            </div>
+            <div class="product">
+                <img src="images/watermelon.jpg" alt="">
+                <h2>Watermelon</h2>
+            </div>
+            <div class="product">
+                <img src="images/Tangerine.jpg" alt="">
+                <h2>Tangerine</h2>
+            </div>
+            <div class="product">
+                <img src="images/lemon.jpg" alt="">
+                <h2>Lemon</h2>
+            </div>
+            <div class="product">
+                <img src="images/banana.jpg" alt="">
+                <h2>Banana</h2>
+            </div>
+            <div class="product">
+                <img src="images/Pineapple.jpg" alt="">
+                <h2>Pineapple</h2>
+            </div>
+            <div class="product">
+                <img src="images/Mango.jpg" alt="">
+                <h2>Mango</h2>
+            </div>
+            <div class="product">
+                <img src="images/Red Apple.jpg" alt="">
+                <h2>Red Apple</h2>
+            </div>
+        </div>
+        
+        <div class="col-11">
+            
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p>Please Enter Details Of The Fruit : </p>
+                    <div class="messages"> </div>
+                    <div class="row-name">Fruit Names : <input type="text" name="addFruitName" class="insertNewFruitName"></div>
+                    <div class="row-icon">Fruit Icons : <input type="Icon"name="addFruitIcon" class="insertNewFruit"></div>
+                    <button class="adding">Submit</button>
+                </div>
+            </div>
 
-    <script src="./app.js"></script>
-    <script src="./app.test.js"></script>
 
-    <script>  
-        mocha.checkLeaks();
-        mocha.run();
-    </script>
+           <div class="row">
+            <div class="col-12">
+                <h1>Fruits Display</h1>
+                <div class="topnav">
+                    <button id="myBtn" class="add">Add</button>
+                    <button class="sort">Sort</button>
+                </div>
+            </div>
+           </div><!DOCTYPE html>
+           <html lang="en">
+           <head>
+               <meta charset="UTF-8">
+               <meta http-equiv="X-UA-Compatible" content="IE=edge">
+               <meta name="viewport" content="width=device-width, initial-scale=1.0">
+               <title>Fruit List Tests</title>
+               <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+               <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js" charset="utf-8"></script>
+               <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.min.js"></script>
+           </head>
+           <body>
+           
+               <div id="mocha"></div>
+               <script>
+                   mocha.setup('bdd');
+                   var assert = chai.assert;
+               </script>
+           
+               <script src="./app.js"></script>
+               <script src="./app.test.js"></script>
+           
+               <script>  
+                   mocha.checkLeaks();
+                   mocha.run();
+               </script>
+               
+           </body>
+           </html>
+
+        <div class="row">
+            <div class="col-6">
+                <h4>Fruit Name</h4>
+                   
+                <div class="nameInput"> </div>
+            </div>
+            <div class="col-6">
+                <!-- <h4>Fruit Icon</h4> -->
+                    
+                <div class="IconInput"> </div>
+            </div>
+        </div>
+
+</div>
+<script src="app.js"></script>
+    <script src="script.js"></script>
     
+
 </body>
+
 </html>
