@@ -48,7 +48,7 @@ describe('fruitNames fruits', ()=>{
         assert.deepEqual("Please enter a valid fruitNames name", fruitsTest.returnMessage())
     });
 
-    it('This should show error message  if input is not a fruits emoji', ()=>{
+    it('This should show error message  if input is not a fruits icon', ()=>{
         const fruitsTest = fruitNamesFruits();
         fruitsTest.addingNewfruitNames("Kiwi🥝", "🥝");
 
